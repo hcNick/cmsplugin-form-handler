@@ -56,6 +56,7 @@ class ProcessFormView(FormView):
     def get_form_kwargs(self):
         kwargs = super(ProcessFormView, self).get_form_kwargs()
         kwargs['source_url'] = self.source_url
+        kwargs.update(self.plugin.get_form_kwargs(self.request))
         return kwargs
 
     def get_success_url(self):
