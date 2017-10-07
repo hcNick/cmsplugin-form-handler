@@ -30,8 +30,8 @@ class FormPluginBase(CMSPluginBase):
     def get_form_kwargs(self, request):
         """
         Returns any additional kwargs to add to the form.
-        
-        Default implementation is to return and empty dict.
+
+        Default implementation is to return an empty dict.
         """
         return {}
 
